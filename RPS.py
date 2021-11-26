@@ -13,40 +13,40 @@ def myclick1():
     p1 = 1
     p2 = random.randint(1, 3)
     if p2 == 1:
-        mylabel.config(text='ROCK DRAWS ROCK', bg='yellow')
-        mylabel.place(x=550, y=250)
+        result.config(text='ROCK DRAWS ROCK', bg='yellow')
+        result.place(x=550, y=250)
     elif p2 == 2:
-        mylabel.config(text='ROCK LOSES PAPER', bg='red')
-        mylabel.place(x=550, y=250)
+        result.config(text='ROCK LOSES PAPER', bg='red')
+        result.place(x=550, y=250)
     else:
-        mylabel.config(text='ROCK BEATS SCISSOR', bg='green')
-        mylabel.place(x=550, y=250)
+        result.config(text='ROCK BEATS SCISSOR', bg='green')
+        result.place(x=550, y=250)
 
 def myclick2():
     p1 = 2
     p2 = random.randint(1, 3)
     if p2 == 1:
-        mylabel.config(text='PAPER BEATS ROCK', bg='green')
-        mylabel.place(x=550, y=250)
+        result.config(text='PAPER BEATS ROCK', bg='green')
+        result.place(x=550, y=250)
     elif p2 == 2:
-        mylabel.config(text='PAPER DRAWS PAPER', bg='yellow')
-        mylabel.place(x=550, y=250)
+        result.config(text='PAPER DRAWS PAPER', bg='yellow')
+        result.place(x=550, y=250)
     else:
-        mylabel.config(text='PAPER LOSES SCISSOR', bg='red')
-        mylabel.place(x=550, y=250)
+        result.config(text='PAPER LOSES SCISSOR', bg='red')
+        result.place(x=550, y=250)
 
 def myclick3():
     p1 = 3
     p2 = random.randint(1, 3)
     if p2 == 1:
-        mylabel.config(text='SCISSOR LOSES ROCK', bg='red')
-        mylabel.place(x=550, y=250)
+        result.config(text='SCISSOR LOSES ROCK', bg='red')
+        result.place(x=550, y=250)
     elif p2 == 2:
-        mylabel.config(text='SCISSOR BEATS PAPER', bg='green')
-        mylabel.place(x=550, y=250)
+        result.config(text='SCISSOR BEATS PAPER', bg='green')
+        result.place(x=550, y=250)
     else:
-        mylabel.config(text='SCISSOR DRAWS SCISSORS', bg='yellow')
-        mylabel.place(x=550, y=250)
+        result.config(text='SCISSOR DRAWS SCISSORS', bg='yellow')
+        result.place(x=550, y=250)
 
 root.geometry('100x100')
 btn = Button(root, text='ROCK', image=photoimage1,
@@ -61,6 +61,6 @@ btn3 = Button(root, text='SCISSOR', image=photoimage3,
                     compound=LEFT, command=myclick3, padx=98, pady=60, borderwidth=5, relief='solid')
 btn3.place(x=99, y=450)
 
-mylabel = Label(root, font='Aerial', width=80, height=4, borderwidth=5, relief='solid')
-mylabel.place(x=550, y=250)
+result = Label(root, font='Aerial', width=80, height=4, borderwidth=5, relief='solid')
+result.place(x=550, y=250)
 root.mainloop()
